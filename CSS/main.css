@@ -54,3 +54,7 @@ body {
 	width: 100%;
 	display: block;
 }
+.gallery__item img {
+	width: 100%;
+	display: block;
+}
