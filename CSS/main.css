@@ -8,7 +8,6 @@
 	--index: calc(1vw + 1vh);
 	--color-dark: #000;
 }
-
 body {
 	overflow: hidden;
 	height: 100vh;
@@ -54,7 +53,45 @@ body {
 	width: 100%;
 	display: block;
 }
-.gallery__item img {
-	width: 100%;
-	display: block;
+.loaded .gallery {
+	opacity: 1;
+}
+.loaded .header span {
+	opacity: 0;
+}
+
+/* DARK MODE OS */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--color-dark);
+	}
+	.header {
+		filter: invert(100%);
+	}
+}
+
+/* MOBILE */
+
+@media (max-width : 992px) {
+
+	.header {
+		position: relative;
+	}
+
+	body {
+		overflow: scroll;
+		display: block;
+		padding: var(--gap);
+	}
+
+	.gallery {
+		width: 100%;
+		column-width: 10em;
+		transform: scale(1);
+	}
+	.gallery__item:hover {
+		transform: scale(1);
+	}
+
 }
